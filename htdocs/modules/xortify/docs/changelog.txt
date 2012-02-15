@@ -1,0 +1,166 @@
+===============================================
+ 2012/02/12 06:28:00 Version 3.00 BETA   ICMS
+===============================================
+ - Removed /include/post.header.endcache.php deleted (Wishcraft)
+ - Removed /admin/index.php icms_form_elements_Captcha changed [no authorised user captcha support in ICMS] (Wishcraft)
+ - Removed /admin/menu.php "../../" was removed from icon paths (Wishcraft)
+ - Rename /xoops_version.php renamed to /icms_version.php (Wishcraft)
+ - Rename /preloads/core.php renamed to /preloads/mainevents.php (Wishcraft)
+ - Rename /class/file/xoopsfile.php renamed to /class/file/icmsfile.php (Wishcraft)
+ - Rename /class/cache/xoopscache.php renamed to /class/file/icmscache.php (Wishcraft)
+ - Moved /templates/xortify_cpanel_bans.html moved to /templates/admin/xortify_cpanel_bans.html (Wishcraft)
+ - Moved /templates/xortify_cpanel_log.html moved to /templates/admin/xortify_cpanel_log.html (Wishcraft)
+ - Moved /templates/xortify_cpanel_signup_form.html moved to /templates/admin/xortify_cpanel_signup_form.html (Wishcraft)
+ - Moved /templates/xortify_cpanel_signup_nocommunication.html moved to /templates/admin/xortify_cpanel_signup_nocommunication.html (Wishcraft)
+ - Added /class/moduleclasses/ XOOPS 2.5 Admin GUI Classes added and changed to ICMS Symmetic Classes [Taken from /Frameworks/moduleclasses] (Wishcraft)
+ - Added /class/file/ XOOPS 2.5 XoopsFile Classes added and changed to ICMS Symmetic Classes (IcmsFile & IcmsFileHandler) [Taken from /class/file/] (Wishcraft)
+ - Added /class/cache/ XOOPS 2.5 XoopsCache Classes added and changed to ICMS Symmetic Classes (IcmsCache) [Taken from /class/cache/] (Wishcraft)
+ - Added /class/utility/ XOOPS 2.5 XoopsUtility Classes added and changed to ICMS Symmetic Classes (IcmsUtility) [Taken from /class/utility/] (Wishcraft)
+ - Added /icms_version.php set_time_limit() added for install, removal and update of module - ICMS Timeout error - Legacy DB Classes (Wishcraft)
+ - Added /icms_version.php $modinfo['modname'] - ICMS Variable Added (Wishcraft)
+ - Added /icms_version.php $modinfo['status_version'] = "Beta" - ICMS Variable Added (Wishcraft)
+ - Added /icms_version.php $modinfo['status'] = "Beta" - ICMS Variable Added (Wishcraft)
+ - Added /icms_version.php $modinfo['developer_email'] - ICMS Variable Added (Wishcraft)
+ - Added /icms_version.php $modinfo['developer_website_url'] - ICMS Variable Added (Wishcraft)
+ - Added /icms_version.php $modinfo['developer_website_name'] - ICMS Variable Added (Wishcraft)
+ - Added /icms_version.php $modinfo['people']['developers'] - ICMS Variable Added (Wishcraft)
+ - Added /icms_version.php $modinfo['people']['testers'] - ICMS Variable Added (Wishcraft)
+ - Added /icms_version.php $modinfo['people']['translators'] - ICMS Variable Added (Wishcraft)
+ - Added /icms_version.php $modinfo['people']['documenters'] - ICMS Variable Added (Wishcraft)
+ - Changed /class/moduleclasses/moduleadmin/moduleadmin.php $xoopsModule to $icmsModule (Wishcraft)
+ - Changed /class/moduleclasses/moduleadmin/moduleadmin.php /Framework/ to /modules/".$this->_obj->getVar('dirname')."/class/ (Wishcraft)
+ - Changed /class/moduleclasses/moduleadmin/moduleadmin.php $GLOBALS['xoopsConfig'] to $GLOBALS['icmsConfig'] (Wishcraft)
+ - Changed /class/moduleclasses/moduleadmin/moduleadmin.php $this->_obj->loadAdminMenu() to $adminmenu = $this->_obj->getAdminMenu(); (Wishcraft)
+ - Changed /class/file/icmsfile.php class XoopsFile() to class IcmsFile() (Wishcraft)
+ - Changed /class/file/file.php xoops_load('xoopsfile') to include_once dirname(__FILE__).'/icmsfile.php'; (Wishcraft)
+ - Changed /class/cache/icmscache.php class XoopsCache() to class IcmsCache() (Wishcraft)
+ - Changed /class/cache/file.php xoops_ to icms_ (Wishcraft)
+ - Changed /class/cache/icmsulitity.php class XoopsUtility() to class IcmsUtility() (Wishcraft)
+ - Changed /class/log.php XoopsObject Class Extension renamed to icms_core_Object (Wishcraft)
+ - Changed /class/log.php XoopsPersitenceObjectHandler Class Extension renamed to icms_ipf_Handler (Wishcraft)
+ - Changed /class/log.php XortifyLogHandler::insert() function made compatible with icms_ipf_Handler (Wishcraft)
+ - Changed /class/log.php XortifyLogHandler::__construct() function made compatible with icms_ipf_Handler (Wishcraft)
+ - Changed /admin/index.php MyTextSantizer changed to icms_core_Textsanitizer (Wishcraft)
+ - Changed /admin/index.php include_once to require_once of base file loading structure [header & paths] (Wishcraft)
+ - Changed /admin/index.php $myts-> changed to icms_core_DataFilter:: (Wishcraft)
+ - Changed /admin/index.php XoopsForm changed to icms_form_elements_ (Wishcraft)
+ - Changed /admin/index.php db: changed to db:admin/ (Wishcraft)
+ - Changed /admin/index.php xoops_getModuleHandler('', '') changed to icms_getModuleHandler('', '') (Wishcraft)
+ - Changed /admin/index.php PageNav() changed to icms_view_PageNav() (Wishcraft)
+ - Changed /admin/index.php xoops_cp_header() changed to icms_cp_header() (Wishcraft)
+ - Changed /admin/index.php xoops_cp_footer() changed to icms_cp_footer() (Wishcraft)
+ - Changed /admin/index.php xoop_loadLanguage() changed to include_once() (Wishcraft)
+ - Changed /include/forms.xortify.php XortifySignupForm() - XoopsForm changed to icms_form_elements_ [depreciated] (Wishcraft)
+ - Changed /include/forms.xortify.php XortifySignupForm() - XoopsFormTheme changed to icms_form_Theme [depreciated] (Wishcraft)
+ - Changed /preload/xortify.php class XortifySystemPreload() renamed to IcmsPreloadXortify() (Wishcraft)
+ - Changed /preload/xortify.php class extension changed from XoopsPreloadItem() to icms_preload_Item() (Wishcraft)
+ - Changed /preload/xortify.php function eventCoreIncludeCommonEnd() changed to eventfinishCoreBoot() (Wishcraft)
+ - Changed /preload/mainevents.php class XortifyCorePreload() renamed to IcmsPreloadMainevents() (Wishcraft)
+ - Changed /preload/mainevents.php class extension changed from XoopsPreloadItem() to icms_preload_Item() (Wishcraft)
+ - Changed /preload/mainevents.php function eventCoreIncludeCommonStart() changed to eventstartCoreBoot() (Wishcraft)
+ - Changed /preload/mainevents.php function eventCoreIncludeCommonEnd() changed to eventfinishCoreBoot() (Wishcraft)
+ - Changed /preload/mainevents.php function eventCoreHeaderAddmeta() changed to eventstartOutputInit() (Wishcraft)
+ - Changed /preload/mainevents.php xoops_loadLanguage() changed to include_once() (Wishcraft)
+ - Changed /preload/mainevents.php /xoops_cache/ changed to /icms_cache/ (Wishcraft)
+ - Changed /icms_version.php "xortify_cpanel_ changed to "admin/xortify_cpanel_ (Wishcraft)
+ - Changed /icms_version.php $modinfo['warning'] - to impresscms warning (Wishcraft)
+ - Changed /banned.php xoops_getModuleHandler('', '') changed to icms_getModuleHandler('', '') (Wishcraft)
+ - Changed /banned.php xoop_loadLanguage() changed to include_once() (Wishcraft)
+ - Changed GLOBAL XoopsCache:: changed to IcmsCache:: (Wishcraft)
+ - Changed GLOBAL $GLOBALS['xoopsDB'] changed to $GLOBALS['db'] (Wishcraft)
+ - Changed GLOBAL $GLOBALS['xoopsUser'] changed to icms::$user (Wishcraft)
+ - Changed GLOBAL xoops_gethandler('...') changed to icms::handler('icms_...') (Wishcraft)
+ - Changed GLOBAL $GLOBALS['xoops']->path( changed to (ICMS_ROOT_PATH. (Wishcraft)
+ - Changed GLOBAL XOOPS_VAR_PATH changed to ICMS_TRUST_PATH (Wishcraft)
+ - Changed GLOBAL XOOPS_ROOT_PATH changed to ICMS_ROOT_PATH (Wishcraft)
+ - Changed GLOBAL XOOPS_URL changed to ICMS_URL (Wishcraft)
+ - Changed GLOBAL $GLOBALS['xoopsConfig'] to $GLOBALS['icmsConfig'] (Wishcraft)
+ - Changed GLOBAL XOOPS to ICMS (Wishcraft)
+ - Changed GLOBAL xoops to icms [except API function names] (Wishcraft)
+ 
+===============================================
+ 2012/01/30 03:36:00 Version 3.04 STABLE XOOPS
+===============================================
+ - Changed /providers/xortify/post.loader.php removed 'exit;' from line 73 - Causing WSOD (Wishcraft)
+ 
+===============================================
+ 2012/01/12 20:21:00 Version 3.02 STABLE XOOPS
+===============================================
+ - Changed /preloads/core.php changed eventCoreIncludeCommonEnd() to include banning redirection (Wishcraft)
+ - Changed /provider/projecthoneypot.org/post.loader.php changed ban display method with session and redirection (Wishcraft)
+ - Changed /provider/stopforumspam.com/post.loader.php changed ban display method with session and redirection (Wishcraft)
+ - Changed /provider/spiders/post.loader.php changed ban display method with session and redirection (Wishcraft)
+ - Changed /provider/xortify/post.loader.php changed ban method with session and redirection (Wishcraft)
+ - Changed /class/log.php changed insert() to remove warning & notice (Wishcraft)
+ - Changed /language/english/ban.php updated description so it reflected banning  (Wishcraft)
+ - Added /banned.php added function for banning message  (Wishcraft)
+ 
+===============================================
+ 2012/01/11 19:29:00 Version 3.01 STABLE XOOPS
+===============================================
+ - Changed /admin/index.php changed xortify_adminMenu() to include page (Wishcraft)
+ - Changed /admin/index.php changed ban data populated to ban list to include comments & category's (Wishcraft)
+ - Changed /admin/index.php changed dashboard population to include cache cleanup information (Wishcraft)
+ - Changed /admin/functions.php changed xortify_adminMenu() to include page navigation & removed system menu  (Wishcraft)
+ - Changed /preloads/core.php changed eventCoreIncludeCommonEnd() to include cache cleanup and file deletion  (Wishcraft)
+ - Changed /templates/xortify_cpanel_bans.html changed template to contain new data for ban list including comments  (Wishcraft)
+ - Added /preloads/core.php added function getFileListAsArray() to retrieve files containing cursor  (Wishcraft)
+ - Added /language/english/admin.php added new dashboard & ban list language constants  (Wishcraft)
+ 
+===============================================
+ 2011/12/28 19:52:00 Version 3.00 STABLE XOOPS
+===============================================
+ - Changed /icms_version.php Swapped Server 1 and Server 2 with preferences  (Wishcraft)
+ - Changed /cron/serverup.php Swapped Server 1 and Server 2  (Wishcraft)
+ - Changed /include/function.php removed 2.6 implementation for XOOPS 2.5 line 112 - 116  (Wishcraft)
+ - Changed $GLOBALS['xortify_api'] to $GLOBALS['xortifyModuleConfig']['protocol']  (Wishcraft)
+ 
+===============================================
+ 2011/12/15 15:26:00 Version 2.99 STABLE XOOPS
+===============================================
+ - Changed /admin/index.php correct header call and templating system implemented  (Wishcraft)
+ - Added /preloads/core.php function __construct() added to preloader; (Wishcraft)
+ - Added /preloads/core.php Failure delay system for preloader strapping; (Wishcraft)
+ - Added /templates/xortify_cpanel_signup_nocommunication.html error output for signup so debug is more clear (Wishcraft)
+ - Added /templates/xortify_cpanel_signup_form.html HTML Form output for signup (Wishcraft)
+ - Added /icms_version.php Fault Delay for preloader Added to Preferences (Wishcraft)
+ - Renamed /templates/admin/xorify_cpanel_bans.html to xortify_cpanel_bans.html; typo in filename ammended  (Wishcraft)
+ - Changed $xoModule renamed to $GLOBALS['xortifyModule']  (Wishcraft)
+ - Changed $xoConfig renamed to $GLOBALS['xortifyModuleConfig']  (Wishcraft)
+ - Changed xortify_banning_notice.html more details, debug error pre output, provider and version added (Wishcraft)
+ - Added eventCoreHeaderCacheEnd added to core preloader; (Wishcraft)
+ - Added headerpostcheck added to core preloader strapping class /provider/providers.php; (Wishcraft)
+ - Added For XOOPS 2.5.0 warning notice added to icms_version.php (Wishcraft)
+ - Added header.post.loader.php; provider for preload in header instaniation - Header.Cache.End (mirrored footer.post.loader.php) (Wishcraft)
+ 
+===============================================
+ 2011/11/08 07:04:00 Version 2.58 STABLE XOOPS
+===============================================
+ - Changed $pathImageAdmin renamed to $GLOBALS['xortifyImageAdmin']  (Wishcraft)
+ - Changed $pathImageIcon renamed to $GLOBALS['xortifyImageIcon']  (Wishcraft)
+ - Changed $GLOBALS['xoopsModule'] in module renamed to $GLOBALS['xortifyModule'] (Wishcraft)
+ - Changed $GLOBALS['xoopsModuleConfig'] in module renamed to $GLOBALS['xortifyModuleConfig'] (Wishcraft)
+ 
+===============================================
+ 2011/11/05 07:42:00 Version 2.57 STABLE XOOPS
+===============================================
+ - Changed path information for XOOPS Microbutton in admin footer include/functions.php  (Wishcraft)
+ 
+===============================================
+ 2011/11/03 07:20:00 Version 2.56 STABLE XOOPS
+===============================================
+ - Changed Protocol URL Reverted back to http://xortify.chronolabs.coop xoops_version.php  (Wishcraft)
+ - Changed Increased seconds to 2 hours for cron on preloader/crontab xoops_version.php  (Wishcraft)
+ - Added docs folder added with documents (Wishcraft)
+ - Added language/english/help folder & files added with documents (Wishcraft)
+ - Added Function getCountByField was added to log.php class (wishcraft)
+ - Added GUI Dashboard was added to admins index.php (wishcraft)
+ - Added GUI About was added to admins index.php (wishcraft) 
+ - Changed Dashboard & About added to admin menu menu.php  (Wishcraft)
+ - Added Admin Icon 32x32 added to Frameworks Folder /Frameworks/Moduleclass  (Wishcraft) 
+ - Added credit.txt to /xortify/docs modular path  (Wishcraft) 
+ - Added install.txt to /xortify/docs modular path  (Wishcraft)
+ - Added changelog.txt to /xortify/docs modular path  (Wishcraft)
+ - Added readme.txt to /xortify/docs modular path  (Wishcraft)   
+ - Added help.html to /xortify/language/english/help path  (Wishcraft)
+ - Added licence.txt to /xortify/docs modular path  (Wishcraft) 
